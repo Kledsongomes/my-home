@@ -1,0 +1,162 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+  --ff-body:'Roboto','sans-serif';
+  font-size: 62.5%;
+}
+body{
+  display: grid;
+  place-items: center;
+  height: calc(90vh - 12px);
+  width: 90vw;
+  margin: 5vw;
+
+  font-family: var(--ff-body);
+  font-size: 2.4rem;
+  color:#242424;
+  
+  animation: bgBody 10000ms infinite ease-in-out backwards;
+}
+.fa-sun{
+  color: #cfcfcf;
+}
+#container{
+  border-radius: 6px;
+  outline: 1px solid rgb(41, 41, 41);
+  box-shadow: 5px 10px 6px rgba(4,4,4,.5);
+  
+  box-sizing: border-box;
+
+
+  padding: 6.4rem 4.8rem;
+}
+.dark #container  {
+  background: #242424;
+}
+
+#myphoto{
+  justify-content: center;
+  border-radius: 50%;
+}
+p{
+  margin-top: 3rem;
+}
+nav ul{
+  padding: 3rem 0;
+}
+nav ul li{
+  list-style: none;
+  margin-bottom: 2.4rem;
+
+}
+nav button{
+  border: none;
+  border-radius: 6px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+
+  cursor: pointer;
+
+  gap: 1rem;
+  height: 5rem;
+  width: 100%;
+  background: #4e4d4d;
+  transition: .5s;
+}
+nav button:hover{
+  outline: 2px solid #cfcfcf;
+  background: #b6b6b6;
+  color: #0b3e79;
+}
+
+#span-bottom{
+  top: 5px;
+  right: 8rem;
+  position: absolute;
+  font-size: 1.6rem;
+
+  animation: font 15000ms 15000ms infinite linear backwards;
+}
+a{
+  text-decoration: none;
+}
+
+#mode{
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+}
+
+body .dark {
+  background: #242424;
+  color: #cfcfcf;
+}
+.dark nav button{
+  outline: 2px solid #cfcfcf;
+  background: #b6b6b6;
+  color: #0b3e79;
+}
+.dark nav button:hover{
+  background: #4e4d4d;
+  color: #eee;
+}
+
+@keyframes bgBody{
+  0%{
+    background: #ffffff;
+  }
+  10%{
+    background: #b3cbe7;
+  }
+  20%{
+    background: #77abe7;
+  }
+  30%{
+    background: #4597f5;
+  }
+  40%{
+    background: #0071f1;
+  }
+  50%{
+    background: #0071f1;
+  }
+  60%{
+    background: #4c9af3;
+  }
+  70%{
+    background: #8fbbec;
+  }
+  80%{
+    background: #8ebff8;
+  }
+  90%{
+    background: #afcae9;
+  }
+  100%{
+  background:  #ffffff;
+  }
+}
+
+@keyframes font{
+  0%{
+    color: #ffffff;
+  }
+  25%{
+    color: tomato;
+  }
+  50%{
+    color: transparent;
+  }
+  75%{
+    color: rgb(158, 16, 16);
+  }
+  100%{
+    color: rgba(255, 255, 255, 0.76); ;
+  }
+}
